@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+</head>
+<body>
+    <h1>Write a JavaScript program to set the background color of a paragraph</h1>
+    <div>
+        <p id="para">Will Change the background color of this paragraph on button click.</p>
+        <button>Change paragraph color</button>
+    </div>
+    <script>
+        
+        const arrColor = ['red','yellow','green','blue','pink','black']
+        let current = 0 
+        const onClick = () => {
+            const para = document.querySelector('#para')
+            para.style.backgroundColor = arrColor[current]
+            // button.style.backgroundColor = arrColor[current]
+            current++;
+        }
+        
+        const button = document.querySelector('button')
+        button.addEventListener('click', onClick)
+    </script>
+</body>
+</html>
